@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed = 2f;
     public float jumpSpeed = 20;
     Rigidbody2D RB;
-    Animator animatior;
+    Animator animator;
     float playerScale;
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        animatior = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         playerScale = transform.localScale.x;
     }      
 
@@ -24,20 +24,20 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey("d"))
         {
             RB.AddForce(Vector2.right * moveSpeed);
-            animatior.SetBool("isWalking", true);
+            animator.SetBool("isWalking", true);
             transform.localScale = new Vector3(playerScale, transform.localScale.y, 0);
            
         }
          if (Input.GetKey("a"))
         {
             RB.AddForce(Vector2.left * moveSpeed);
-            animatior.SetBool("isWalking", true);
+            animator.SetBool("isWalking", true);
             transform.localScale = new Vector3(-playerScale, transform.localScale.y, 0);
         }         
 
         else if (RB.velocity.magnitude <= 0.5f)
         {
-            animatior.SetBool("isWalking", false);
+            animator.SetBool("isWalking", false);
         }
 
         Jump();
