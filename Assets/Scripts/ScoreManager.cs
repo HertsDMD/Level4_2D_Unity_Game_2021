@@ -6,14 +6,12 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     private int Score;
+    public Text scoreText;
 
     public void ObjectCollected()
     {
         Score++;
-
-        Debug.Log("Current Score: " + Score);
-
+        scoreText.text = Score.ToString();    
     }   
-
 
 }
