@@ -14,8 +14,13 @@ public class HealthManager : MonoBehaviour
     float overlayDuration;
     bool displayOverlay;
 
+
+    Scene_Manager sceneManager;
+
     private void Start()
     {
+        sceneManager = FindObjectOfType<Scene_Manager>();
+
         health = 100;
         healthText.text = health.ToString();
         gameOverPanel.SetActive(false);
@@ -43,6 +48,8 @@ public class HealthManager : MonoBehaviour
             health = 0;
             damageOverlay.SetActive(false);// disables  damage overlay
             gameOverPanel.SetActive(true); // anables game over panel
+          
+            Invoke(nameof(PlayerDies), 1);
         }
         if (health >= 100)
         {
@@ -51,8 +58,8 @@ public class HealthManager : MonoBehaviour
     }
   
     void PlayerDies()
-    { 
-        // restart the game 
+    {
+        sceneManager.RestartScene();
         // trigger death animation 
         // trigger death sound fx
         // display final score
