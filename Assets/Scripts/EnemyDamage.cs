@@ -19,4 +19,11 @@ public class EnemyDamage : MonoBehaviour
             healthManager.Damage(damageValue);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            healthManager.Damage(damageValue);
+        }
+    }
 }
