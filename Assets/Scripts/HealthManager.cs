@@ -49,7 +49,7 @@ public class HealthManager : MonoBehaviour
             damageOverlay.SetActive(false);// disables  damage overlay
             gameOverPanel.SetActive(true); // anables game over panel
           
-            Invoke(nameof(PlayerDies), 1);
+            Invoke(nameof(PlayerDies), 2);
         }
         if (health >= 100)
         {
