@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    int health;
+    public int health;
     public Text healthText;
     public GameObject gameOverPanel;
     public GameObject damageOverlay;

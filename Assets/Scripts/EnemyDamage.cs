@@ -24,8 +24,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            healthManager.Damage(damageValue);
-            Destroy(gameObject, 0.5f);
+            healthManager.Damage(damageValue);          
         }
     }
 }
