@@ -40,6 +40,12 @@ public class HealthManager : MonoBehaviour
         damageOverlay.SetActive(true); // enables damage overlay
         Invoke(nameof(DisableOverlay), 0.5f); // disables it after 1/2 sec
     }
+    public void AddHealth(int healthadded)
+    {
+        health += healthadded;
+        HealthCheck();
+        healthText.text = health.ToString();
+    }
 
     void HealthCheck()
     {

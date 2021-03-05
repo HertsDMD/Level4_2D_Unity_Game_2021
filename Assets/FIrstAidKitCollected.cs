@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour
+public class FIrstAidKitCollected : MonoBehaviour
 {
     HealthManager healthManager;
-    public int damageValue = 20;
+    public int healthAdded = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -16,16 +16,8 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            healthManager.Damage(damageValue);
-            Destroy(gameObject, 0.5f);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            healthManager.Damage(damageValue);
-            Destroy(gameObject, 0.5f);
+            healthManager.AddHealth(healthAdded);
+            Destroy(gameObject, 1);
         }
     }
 }
