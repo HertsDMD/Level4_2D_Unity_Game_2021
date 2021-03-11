@@ -10,38 +10,46 @@ public class PlayerMove : MonoBehaviour
     Animator animator;
     float playerScale;
     public LayerMask groundLayer;
-    public Transform groundCheck;
+    public Transform groundCheck;      
+
+    bool DeathTrigger;
    
     void Start()
     {
-        RB = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        playerScale = transform.localScale.x;
-    }      
+        RB = GetComponentInChildren<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        playerScale = transform.localScale.x;      
+    }
 
     void Update()
     {
-        if (Input.GetKey("d"))
-        {
-            RB.AddForce(Vector2.right * moveSpeed);
-            animator.SetBool("isWalking", true);
-            transform.localScale = new Vector3(playerScale, transform.localScale.y, 0);
-           
-        }
-         if (Input.GetKey("a"))
-        {
-            RB.AddForce(Vector2.left * moveSpeed);
-            animator.SetBool("isWalking", true);
-            transform.localScale = new Vector3(-playerScale, transform.localScale.y, 0);
-        }         
 
-        else if (RB.velocity.magnitude <= 0.5f)
+        if (!DeathTrigger) // locks any further naimations one Death trigger is... triggered
         {
-            animator.SetBool("isWalking", false);
-        }
 
-        Jump();
+            if (Input.GetKey("d"))
+            {
+                RB.AddForce(Vector2.right * moveSpeed);
+                animator.SetBool("isWalking", true);
+                transform.localScale = new Vector3(playerScale, transform.localScale.y, 0);
+
+            }
+            if (Input.GetKey("a"))
+            {
+                RB.AddForce(Vector2.left * moveSpeed);
+                animator.SetBool("isWalking", true);
+                transform.localScale = new Vector3(-playerScale, transform.localScale.y, 0);
+            }
+
+            else if (RB.velocity.magnitude <= 0.5f)
+            {
+                animator.SetBool("isWalking", false);
+            }
+
+            Jump();
+        }
     }
+      
     void Jump()
     {
         Collider2D groundCollider = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
@@ -53,5 +61,10 @@ public class PlayerMove : MonoBehaviour
                 RB.AddForce(Vector2.up * jumpSpeed,ForceMode2D.Impulse);
             }
         }           
+    }
+    public void PlayerDies()
+    {
+        DeathTrigger = true;
+        animator.SetBool("isDead", true);
     }
 }
