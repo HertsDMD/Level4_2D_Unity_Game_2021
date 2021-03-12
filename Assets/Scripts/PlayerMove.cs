@@ -10,7 +10,9 @@ public class PlayerMove : MonoBehaviour
     Animator animator;
     float playerScale;
     public LayerMask groundLayer;
-    public Transform groundCheck;      
+    public Transform groundCheck;
+
+    AudioManager audioManager;
 
     bool DeathTrigger;
    
@@ -18,7 +20,8 @@ public class PlayerMove : MonoBehaviour
     {
         RB = GetComponentInChildren<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        playerScale = transform.localScale.x;      
+        playerScale = transform.localScale.x;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class PlayerMove : MonoBehaviour
             }
 
             Jump();
+            PlayWalkingSound();
         }
     }
       
@@ -66,5 +70,17 @@ public class PlayerMove : MonoBehaviour
     {
         DeathTrigger = true;
         animator.SetBool("isDead", true);
+    }
+
+    void PlayWalkingSound()
+    {
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
+        {
+            audioManager.PlaySound("AlienWalking", true);
+        }
+        if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
+        {
+            audioManager.PlaySound("AlienWalking", false);
+        }
     }
 }
