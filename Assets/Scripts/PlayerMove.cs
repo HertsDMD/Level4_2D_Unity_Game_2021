@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public float jumpSpeed = 20;
+    public float moveSpeed = 400f;
+    public float jumpSpeed = 200f;
+    bool isJumping;
     Rigidbody2D RB;
     Animator animator;
     float playerScale;
@@ -15,7 +14,9 @@ public class PlayerMove : MonoBehaviour
     AudioManager audioManager;
 
     bool DeathTrigger;
-   
+    enum Direction { idle, left, right };
+    Direction playerState = Direction.idle;
+
     void Start()
     {
         RB = GetComponentInChildren<Rigidbody2D>();
@@ -26,50 +27,63 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-
-        if (!DeathTrigger) // locks any further naimations one Death trigger is... triggered
+        if (!DeathTrigger) // locks any further naimations when Death trigger is triggered
         {
 
             if (Input.GetKey("d"))
             {
-                RB.AddForce(Vector2.right * moveSpeed);
+                playerState = Direction.right;
                 animator.SetBool("isWalking", true);
-                transform.localScale = new Vector3(playerScale, transform.localScale.y, 0);
 
             }
             if (Input.GetKey("a"))
             {
-                RB.AddForce(Vector2.left * moveSpeed);
+                playerState = Direction.left;
                 animator.SetBool("isWalking", true);
-                transform.localScale = new Vector3(-playerScale, transform.localScale.y, 0);
             }
 
             else if (RB.velocity.magnitude <= 0.5f)
             {
                 animator.SetBool("isWalking", false);
             }
-
-            Jump();
             PlayWalkingSound();
+            Jump();
         }
     }
-      
     void Jump()
     {
         Collider2D groundCollider = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-      
+
         if (groundCollider != null)
         {
-            if (Input.GetButtonDown ("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
-                RB.AddForce(Vector2.up * jumpSpeed,ForceMode2D.Impulse);
+                isJumping = true;
+                audioManager.PlaySound("AlienJumping", true);
             }
-        }           
+        }
     }
-    public void PlayerDies()
+
+    private void FixedUpdate()
     {
-        DeathTrigger = true;
-        animator.SetBool("isDead", true);
+        if (isJumping)
+        {
+            RB.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            isJumping = false;
+        }
+        switch (playerState)
+        {
+            case Direction.right:
+                RB.AddForce(Vector2.right * moveSpeed);
+                transform.localScale = new Vector3(playerScale, transform.localScale.y, 0);
+                playerState = Direction.idle;
+                break;
+            case Direction.left:
+                RB.AddForce(Vector2.left * moveSpeed);
+                transform.localScale = new Vector3(-playerScale, transform.localScale.y, 0);
+                playerState = Direction.idle;
+                break;
+        }
     }
 
     void PlayWalkingSound()
@@ -82,5 +96,14 @@ public class PlayerMove : MonoBehaviour
         {
             audioManager.PlaySound("AlienWalking", false);
         }
+    }
+    public void PlayerWins()
+    {
+
+    }
+    public void PlayerDies()
+    {
+        DeathTrigger = true;
+        animator.SetBool("isDead", true);
     }
 }
