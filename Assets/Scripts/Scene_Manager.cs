@@ -12,6 +12,7 @@ public class Scene_Manager : MonoBehaviour
         SceneManager.LoadScene(0); // restarts level 1       
     }
 
+
     public void NextLevel()
     {
         SceneManager.LoadScene(nextSceneNumber);
