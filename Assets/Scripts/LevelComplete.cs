@@ -11,12 +11,17 @@ public class LevelComplete : MonoBehaviour
     Scene_Manager sceneManager;
     ScoreManager scoreManager;
 
+    GameObject RestartButton;
+
     // Start is called before the first frame update
     void Start()
     {
         levelCompleteText.SetActive(false);
         sceneManager = FindObjectOfType<Scene_Manager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+
+        RestartButton = GameObject.Find("RestartButton");
+        RestartButton.SetActive(false);
     }
 
    
@@ -45,5 +50,11 @@ public class LevelComplete : MonoBehaviour
         levelCompleteText.SetActive(true);
         Text finalScore = levelCompleteText.GetComponentInChildren<Text>();
         finalScore.text = "Final Score: " + scoreManager.ReturnFinalScore().ToString();
+
+        if (RestartButton != null)
+        {
+            RestartButton.SetActive(true);
+
+        }
     }
 }
