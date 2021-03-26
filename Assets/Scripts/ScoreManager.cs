@@ -20,6 +20,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
+            _instance = this;
             DontDestroyOnLoad(this);
         }     
     }
