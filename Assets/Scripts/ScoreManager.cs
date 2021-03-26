@@ -12,8 +12,6 @@ public class ScoreManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
     }
-
-
     public void ObjectCollected()
     {
         Score++;
@@ -28,6 +26,11 @@ public class ScoreManager : MonoBehaviour
             scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
             scoreText.text = Score.ToString();
         }
+    }
+
+    public int ReturnFinalScore()
+    {
+        return Score;
     }
 
 }

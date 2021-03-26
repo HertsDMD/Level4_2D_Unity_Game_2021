@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75d0e6c4f3a1d0438f6f3fec608350b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 500
+  moveSpeed: 1200
   jumpSpeed: 200
   groundLayer:
     serializedVersion: 2
@@ -3416,10 +3416,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2006e21829e3f164b92da213f849fbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   healthText: {fileID: 1311353310}
   gameOverPanel: {fileID: 585265659}
   damageOverlay: {fileID: 1398571253}
+  FullHealth: 1
 --- !u!114 &703108476
 MonoBehaviour:
   m_ObjectHideFlags: 0
