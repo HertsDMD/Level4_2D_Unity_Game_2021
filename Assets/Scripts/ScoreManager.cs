@@ -6,11 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     private static ScoreManager _instance;
-    private static ScoreManager Instance { get { return _instance; } }
-
-
-    private int Score;
-    public Text scoreText;
+    public static ScoreManager Instance { get { return _instance; } }
 
     private void Awake()
     {
@@ -24,6 +20,9 @@ public class ScoreManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }     
     }
+
+    private int Score;
+    public Text scoreText;
     public void ObjectCollected()
     {
         Score++;
