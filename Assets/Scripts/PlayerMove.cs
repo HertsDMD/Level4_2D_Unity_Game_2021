@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         if (!DeathTrigger) // locks any further naimations when Death trigger is triggered
-        {
+        {
 
             if (Input.GetKey("d"))
             {

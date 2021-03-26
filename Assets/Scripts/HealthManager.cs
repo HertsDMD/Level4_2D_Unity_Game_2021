@@ -5,72 +5,65 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public int health;
+    int health = 100;
     public Text healthText;
     public GameObject gameOverPanel;
     public GameObject damageOverlay;
-
-    float overlayStartTime;
-    float overlayDuration;
-    bool displayOverlay;
-
-    Scene_Manager sceneManager;
+    readonly float overlayStartTime;
+    readonly float overlayDuration;
+    readonly bool displayOverlay;
 
     PlayerMove playerMove;
 
     private void Start()
     {
-        sceneManager = FindObjectOfType<Scene_Manager>();
         playerMove = FindObjectOfType<PlayerMove>();
-        health = 100;
-        healthText.text = health.ToString();
+        health = playerHealth;
         gameOverPanel.SetActive(false);
         damageOverlay.SetActive(false);
 
     }
-    void Update()
-    {        
-        
+
+    public bool FullHealth = true;
+    private int playerHealth
+    {
+        get { return health; }
+        set
+        {
+            health = value;
+            FullHealth = false;
+
+            if (health <= 0)
+            {
+                health = 0;
+                PlayerDies();
+            }
+            else if (health >= 100)
+            {
+                health = 100;
+                FullHealth = true;
+            }
+            healthText.text = health.ToString();
+        }
     }
+
     public void Damage(int damageValue)
     {
-        health -= damageValue;
-        HealthCheck();
-        healthText.text = health.ToString();
-
+        playerHealth -= damageValue;
         damageOverlay.SetActive(true); // enables damage overlay
-        Invoke(nameof(DisableOverlay), 0.5f); // disables it after 1/2 sec
-    }
+        Invoke(nameof(DisableOverlay), 0.5f); // disables it after 1/2 sec
+    }
     public void AddHealth(int healthAdded)
     {
-        health += healthAdded;
-        HealthCheck();
+        playerHealth += healthAdded;
         healthText.text = health.ToString();
     }
 
-    void HealthCheck()
-    {
-        if (health <= 0)
-        {
-            health = 0;
-            damageOverlay.SetActive(false);// disables  damage overlay
-            gameOverPanel.SetActive(true); // anables game over panel
-            playerMove.PlayerDies();
-            Invoke(nameof(PlayerDies), 2);
-        }
-        if (health >= 100)
-        {
-            health = 100;
-        }
-    }
-  
     void PlayerDies()
     {
-        sceneManager.RestartScene();      
-        // trigger death animation 
-        // trigger death sound fx
-        // display final score
-
+        gameOverPanel.SetActive(true); // anables game over panel
+        playerMove.PlayerDies();
+        Invoke(nameof(Scene_Manager.RestartScene), 2);
     }
 
     void DisableOverlay()

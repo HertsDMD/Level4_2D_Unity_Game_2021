@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     public void ObjectCollected()
     {
         Score++;
-        scoreText.text = Score.ToString();    
+        scoreText.text = Score.ToString();
 
     }
 
