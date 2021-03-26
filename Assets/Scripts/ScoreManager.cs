@@ -5,12 +5,23 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    private static ScoreManager _instance;
+    private static ScoreManager Instance { get { return _instance; } }
+
+
     private int Score;
     public Text scoreText;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (_instance !=null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this);
+        }     
     }
     public void ObjectCollected()
     {
