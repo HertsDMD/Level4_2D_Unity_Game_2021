@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class Scene_Manager : MonoBehaviour
 {
     public int nextSceneNumber;
+    int finalLevel = 2;
+    int currentScene;
+
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
 
     public void RestartScene()
     {
@@ -17,5 +24,27 @@ public class Scene_Manager : MonoBehaviour
     {
         SceneManager.LoadScene(nextSceneNumber);
     }
+    public void NextLevel(int _delay)
+    {
+        Invoke(nameof(SceneLoadDelay), _delay);
+    }
+
+    void SceneLoadDelay ()
+    { 
+        SceneManager.LoadScene(nextSceneNumber);        
+    }
+    public bool IsCurrentSceneFinal()
+    {
+        if (currentScene == finalLevel)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    
+    }
+
 
 }
