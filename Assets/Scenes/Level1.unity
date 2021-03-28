@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 53232634}
   - component: {fileID: 53232633}
   - component: {fileID: 53232632}
+  - component: {fileID: 53232636}
   m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
@@ -290,7 +291,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d5eb2ee833a57f6439b95121240e80df, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -387,6 +388,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53232636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53232631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095c29e6a639b1441b0779a78e258d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &59030262
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,80 +562,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &107121984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 107121987}
-  - component: {fileID: 107121986}
-  - component: {fileID: 107121985}
-  m_Layer: 5
-  m_Name: LeveCompleteImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &107121985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107121984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95752c413af96de478a25cebe7b84747, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &107121986
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107121984}
-  m_CullTransparentMesh: 0
---- !u!224 &107121987
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107121984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4209, y: 1.4209, z: 1.4209}
-  m_Children: []
-  m_Father: {fileID: 1132431665}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &143324777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,86 +1010,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &229507326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 229507327}
-  - component: {fileID: 229507328}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &229507327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229507326}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.867558, y: 0.2467704, z: -98.091255}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &229507328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229507326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c77c2bcc7b29e44aab7eff4416cdda5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - nameOfSound: AlienWalk
-    clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
-    volume: 0.216
-    volumeRandomness: 0.086
-    pitch: 2
-    pitchRandomness: 0.135
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: AlienJum
-    clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
-    volume: 0.5
-    volumeRandomness: 0
-    pitch: 2
-    pitchRandomness: 0.119
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: ForestAmbience
-    clip: {fileID: 8300000, guid: 87e2220e7529f564d9cf2a1d5a719667, type: 3}
-    volume: 0.405
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: LevelMusic
-    clip: {fileID: 8300000, guid: c97120819db9e084986cdcc0aa67eb5c, type: 3}
-    volume: 0.292
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 1
-    reverbPreset: 0
 --- !u!4 &237327431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3100531436922542308, guid: 1fb4bd37a3e2f7a48b1ea1d5dac5893f,
@@ -1693,7 +1552,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 5.94, y: 5.39}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1714,7 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616244daecfe9194ba6305c1058c4256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompleteText: {fileID: 107121984}
+  levelCompleteText: {fileID: 633351358}
 --- !u!212 &334739393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1754,7 +1613,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94c7827e21932b145ba7929bd711167f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efbe47dc18fdb1f4bad40c4a2efb02fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1773,8 +1632,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334739390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.88, y: -2.04, z: 0}
-  m_LocalScale: {x: 0.37656838, y: 0.37656838, z: 0.37656838}
+  m_LocalPosition: {x: 17.59, y: 4.4, z: 0}
+  m_LocalScale: {x: 0.29748902, y: 0.29748902, z: 0.29748902}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -1819,7 +1678,7 @@ MonoBehaviour:
     m_Bits: 512
   m_GroundCheck: {fileID: 931878376}
   NameOfWalkSound: AlienWalk
-  NameOfJumpSound: AlienJum
+  NameOfJumpSound: AlienJump
 --- !u!60 &358124684
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2715,7 +2574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44234dfe37c4860428c783f449a3e901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.1
+  smoothTime: 0.3
   VerticalOffset: 1
 --- !u!20 &519420031
 Camera:
@@ -2768,7 +2627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.24, z: -10}
+  m_LocalPosition: {x: -1.49, y: 6.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3092,6 +2951,81 @@ Transform:
   m_Father: {fileID: 1758440631}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633351358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633351361}
+  - component: {fileID: 633351360}
+  - component: {fileID: 633351359}
+  m_Layer: 5
+  m_Name: LeveCompletePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &633351359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633351358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.53333336}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &633351360
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633351358}
+  m_CullTransparentMesh: 0
+--- !u!224 &633351361
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633351358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.420899, y: 1.420899, z: 1.420899}
+  m_Children:
+  - {fileID: 1403481900}
+  m_Father: {fileID: 1132431665}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000045776367}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &664158978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3464,131 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &758990312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758990314}
+  - component: {fileID: 758990313}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &758990313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758990312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c77c2bcc7b29e44aab7eff4416cdda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - nameOfSound: AlienWalk
+    clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
+    volume: 0.604
+    volumeRandomness: 0.086
+    pitch: 2
+    pitchRandomness: 0.135
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: AlienJump
+    clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
+    volume: 0.5
+    volumeRandomness: 0
+    pitch: 2
+    pitchRandomness: 0.119
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: ForestAmbience
+    clip: {fileID: 8300000, guid: e030d30a8986e4a4ba757337e238b242, type: 3}
+    volume: 0.405
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: LevelMusic
+    clip: {fileID: 8300000, guid: e281087364c83c04ba76cb7b791e0989, type: 3}
+    volume: 0.477
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 1
+    reverbPreset: 25
+  - nameOfSound: AlientHurt
+    clip: {fileID: 8300000, guid: 58ab8f778bb11ad46a89b61fc0a82008, type: 3}
+    volume: 0.595
+    volumeRandomness: 0.104
+    pitch: 2
+    pitchRandomness: 0.158
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: AlientDead
+    clip: {fileID: 8300000, guid: 4269b03565790574c967da3b013164d4, type: 3}
+    volume: 0.265
+    volumeRandomness: 0.153
+    pitch: 2
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: GameOver
+    clip: {fileID: 8300000, guid: 87e2220e7529f564d9cf2a1d5a719667, type: 3}
+    volume: 0.292
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 0
+  - nameOfSound: Victory
+    clip: {fileID: 8300000, guid: 9f93306bd53cba8498edd58ebd301c7c, type: 3}
+    volume: 0.414
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: StarCollected
+    clip: {fileID: 8300000, guid: 1651f5e8654d90740a40f4c7514de3d7, type: 3}
+    volume: 0.315
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+--- !u!4 &758990314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758990312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.867558, y: 0.2467704, z: -98.091255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &780690672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,7 +5911,7 @@ RectTransform:
   - {fileID: 459318588}
   - {fileID: 585265660}
   - {fileID: 1398571254}
-  - {fileID: 107121987}
+  - {fileID: 633351361}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6778,6 +6837,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398571253}
   m_CullTransparentMesh: 0
+--- !u!1 &1403481899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403481900}
+  - component: {fileID: 1403481902}
+  - component: {fileID: 1403481901}
+  m_Layer: 5
+  m_Name: LeveCompleteImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1403481900
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403481899}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75232, y: 0.9, z: 0.75232}
+  m_Children: []
+  m_Father: {fileID: 633351361}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -8}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403481901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403481899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 95752c413af96de478a25cebe7b84747, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1403481902
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403481899}
+  m_CullTransparentMesh: 0
 --- !u!1 &1531896513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,12 +7763,12 @@ PrefabInstance:
     - target: {fileID: 3100531436922542308, guid: 1fb4bd37a3e2f7a48b1ea1d5dac5893f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.290873
+      value: 28.25
       objectReference: {fileID: 0}
     - target: {fileID: 3100531436922542308, guid: 1fb4bd37a3e2f7a48b1ea1d5dac5893f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17104673
+      value: -6.39
       objectReference: {fileID: 0}
     - target: {fileID: 3100531436922542308, guid: 1fb4bd37a3e2f7a48b1ea1d5dac5893f,
         type: 3}

@@ -18,7 +18,14 @@ public class Scene_Manager : MonoBehaviour
     {
         SceneManager.LoadScene(0); // restarts level 1       
     }
-
+    public void RestartScene(int _delay)
+    {
+        Invoke(nameof(SceneRestartDelay), _delay); // restarts level 1 with a delay  
+    }
+    void SceneRestartDelay()
+    {
+        SceneManager.LoadScene(0); // restarts level 1   
+    }
 
     public void NextLevel()
     {

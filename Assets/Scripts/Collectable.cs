@@ -6,10 +6,12 @@ public class Collectable : MonoBehaviour
 {
 
     ScoreManager scoreManager;
+    AudioManager audioManager;
 
     private void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,8 +19,8 @@ public class Collectable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             scoreManager.ObjectCollected();
-           
-            Destroy(gameObject, 0.5f);
+            audioManager.PlaySound("StarCollected", true);
+            Destroy(gameObject);
         }
     }
 }

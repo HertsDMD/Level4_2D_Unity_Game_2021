@@ -145,9 +145,22 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+
+
+    public void PlayerHurt()
+    {
+        audioManager.PlaySound("AlientHurt", true);
+    }
+    public void PlayerWins()
+    {
+        audioManager.PlaySound("Victory", true);
+    }
     public void PlayerDies()
     {
         DeathTrigger = true;
         animator.SetBool("isDead", true);
+        audioManager.PlaySound("LevelMusic", false);
+        audioManager.PlaySound("AlientDead", true);
+        audioManager.PlaySound("GameOver", true);
     }
 }

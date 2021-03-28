@@ -14,6 +14,7 @@ public class HealthManager : MonoBehaviour
     readonly bool displayOverlay;
 
     PlayerMove playerMove;
+    Scene_Manager sceneManager;
 
     private void Start()
     {
@@ -21,10 +22,12 @@ public class HealthManager : MonoBehaviour
         health = playerHealth;
         gameOverPanel.SetActive(false);
         damageOverlay.SetActive(false);
+        sceneManager = FindObjectOfType<Scene_Manager>();
 
     }
 
     public bool FullHealth = true;
+    bool playerDead;
     private int playerHealth
     {
         get { return health; }
@@ -49,10 +52,15 @@ public class HealthManager : MonoBehaviour
 
     public void Damage(int damageValue)
     {
-        playerHealth -= damageValue;
-        damageOverlay.SetActive(true); // enables damage overlay
-        Invoke(nameof(DisableOverlay), 0.5f); // disables it after 1/2 sec
-    }
+        if (!playerDead)
+        {
+            playerMove.PlayerHurt();
+            playerHealth -= damageValue;
+            damageOverlay.SetActive(true); // enables damage overlay
+            Invoke(nameof(DisableOverlay), 0.5f); // disables it after 1/2 sec    }
+        }
+
+    }
     public void AddHealth(int healthAdded)
     {
         playerHealth += healthAdded;
@@ -61,9 +69,13 @@ public class HealthManager : MonoBehaviour
 
     void PlayerDies()
     {
-        gameOverPanel.SetActive(true); // anables game over panel
-        playerMove.PlayerDies();
-        Invoke(nameof(Scene_Manager.RestartScene), 2);
+        if (!playerDead)
+        {
+             gameOverPanel.SetActive(true); // anables game over panel
+             playerMove.PlayerDies();
+             sceneManager.RestartScene(2); // restarts after a 2 second delay
+             playerDead = true;
+        }
     }
 
     void DisableOverlay()

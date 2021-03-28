@@ -33,6 +33,7 @@ public class Sound
         source = _source;
         source.clip = clip;
         source.loop = loop;
+        source.playOnAwake = false;
         source.panStereo = stereoPan;
         reverbFilter = _reverbFilter;
         reverbFilter.reverbPreset = reverbPreset;
