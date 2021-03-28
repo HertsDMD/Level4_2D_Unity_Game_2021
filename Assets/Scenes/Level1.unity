@@ -2968,7 +2968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &633351359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3569,6 +3569,15 @@ MonoBehaviour:
   - nameOfSound: StarCollected
     clip: {fileID: 8300000, guid: 1651f5e8654d90740a40f4c7514de3d7, type: 3}
     volume: 0.315
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: HealthKitCollected
+    clip: {fileID: 8300000, guid: 5e66d19f92458ed469eb6ac7fa7ae9ef, type: 3}
+    volume: 0.871
     volumeRandomness: 0
     pitch: 1
     pitchRandomness: 0
@@ -6352,7 +6361,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2d5c2fbaa91d70e4e9e0bb8b0f5ca4c6, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

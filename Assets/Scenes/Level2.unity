@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &43329335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 95455780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &47924821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,6 +499,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &95455780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1050001251}
+    m_Modifications:
+    - target: {fileID: 9209503497902981832, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_Name
+      value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981835, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 474cf4e92772cd642a8f9b6158056d4a, type: 3}
 --- !u!1 &107121984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5346,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1050001250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050001251}
+  - component: {fileID: 1050001252}
+  m_Layer: 0
+  m_Name: BatMaster2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1050001251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050001250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.56, y: -4.88, z: 15.3125}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 43329335}
+  m_Father: {fileID: 1808642757}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1050001252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050001250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d5c2fbaa91d70e4e9e0bb8b0f5ca4c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1061900127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,6 +5515,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1111304383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1111304384}
+  - component: {fileID: 1111304385}
+  m_Layer: 0
+  m_Name: BatMaster2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1111304384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111304383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.94, y: -10.85, z: 15.3125}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1936271542}
+  m_Father: {fileID: 1808642757}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1111304385
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111304383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d5c2fbaa91d70e4e9e0bb8b0f5ca4c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1125411050
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,131 +6140,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1227073846
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1227073848}
-  - component: {fileID: 1227073847}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1227073847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227073846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c77c2bcc7b29e44aab7eff4416cdda5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - nameOfSound: AlienWalk
-    clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
-    volume: 0.604
-    volumeRandomness: 0.086
-    pitch: 2
-    pitchRandomness: 0.135
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: AlienJump
-    clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
-    volume: 0.5
-    volumeRandomness: 0
-    pitch: 2
-    pitchRandomness: 0.119
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: ForestAmbience
-    clip: {fileID: 8300000, guid: e030d30a8986e4a4ba757337e238b242, type: 3}
-    volume: 0.405
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: LevelMusic
-    clip: {fileID: 8300000, guid: e281087364c83c04ba76cb7b791e0989, type: 3}
-    volume: 0.477
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 1
-    reverbPreset: 25
-  - nameOfSound: AlientHurt
-    clip: {fileID: 8300000, guid: 58ab8f778bb11ad46a89b61fc0a82008, type: 3}
-    volume: 0.595
-    volumeRandomness: 0.104
-    pitch: 2
-    pitchRandomness: 0.158
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: AlientDead
-    clip: {fileID: 8300000, guid: 4269b03565790574c967da3b013164d4, type: 3}
-    volume: 0.265
-    volumeRandomness: 0.153
-    pitch: 2
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: GameOver
-    clip: {fileID: 8300000, guid: 87e2220e7529f564d9cf2a1d5a719667, type: 3}
-    volume: 0.292
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 0
-  - nameOfSound: Victory
-    clip: {fileID: 8300000, guid: 9f93306bd53cba8498edd58ebd301c7c, type: 3}
-    volume: 0.414
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
-  - nameOfSound: StarCollected
-    clip: {fileID: 8300000, guid: 1651f5e8654d90740a40f4c7514de3d7, type: 3}
-    volume: 0.315
-    volumeRandomness: 0
-    pitch: 1
-    pitchRandomness: 0
-    stereoPan: 0
-    loop: 0
-    reverbPreset: 25
---- !u!4 &1227073848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227073846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.867558, y: 0.2467704, z: -98.091255}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241247416
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,6 +6650,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1393154387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393154389}
+  - component: {fileID: 1393154388}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1393154388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393154387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c77c2bcc7b29e44aab7eff4416cdda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - nameOfSound: AlienWalk
+    clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
+    volume: 0.604
+    volumeRandomness: 0.086
+    pitch: 2
+    pitchRandomness: 0.135
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: AlienJump
+    clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
+    volume: 0.5
+    volumeRandomness: 0
+    pitch: 2
+    pitchRandomness: 0.119
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: ForestAmbience
+    clip: {fileID: 8300000, guid: e030d30a8986e4a4ba757337e238b242, type: 3}
+    volume: 0.405
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: LevelMusic
+    clip: {fileID: 8300000, guid: e281087364c83c04ba76cb7b791e0989, type: 3}
+    volume: 0.477
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 1
+    reverbPreset: 25
+  - nameOfSound: AlientHurt
+    clip: {fileID: 8300000, guid: 58ab8f778bb11ad46a89b61fc0a82008, type: 3}
+    volume: 0.595
+    volumeRandomness: 0.104
+    pitch: 2
+    pitchRandomness: 0.158
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: AlientDead
+    clip: {fileID: 8300000, guid: 4269b03565790574c967da3b013164d4, type: 3}
+    volume: 0.265
+    volumeRandomness: 0.153
+    pitch: 2
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: GameOver
+    clip: {fileID: 8300000, guid: 87e2220e7529f564d9cf2a1d5a719667, type: 3}
+    volume: 0.292
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 0
+  - nameOfSound: Victory
+    clip: {fileID: 8300000, guid: 9f93306bd53cba8498edd58ebd301c7c, type: 3}
+    volume: 0.414
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: StarCollected
+    clip: {fileID: 8300000, guid: 1651f5e8654d90740a40f4c7514de3d7, type: 3}
+    volume: 0.315
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+  - nameOfSound: HealthKitCollected
+    clip: {fileID: 8300000, guid: 5e66d19f92458ed469eb6ac7fa7ae9ef, type: 3}
+    volume: 0.815
+    volumeRandomness: 0
+    pitch: 1
+    pitchRandomness: 0
+    stereoPan: 0
+    loop: 0
+    reverbPreset: 25
+--- !u!4 &1393154389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393154387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.867558, y: 0.2467704, z: -98.091255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398571253
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,6 +8266,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1241247418}
+  - {fileID: 1050001251}
+  - {fileID: 1111304384}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8519,6 +8717,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1936271541
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1111304384}
+    m_Modifications:
+    - target: {fileID: 9209503497902981832, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_Name
+      value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981835, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 474cf4e92772cd642a8f9b6158056d4a, type: 3}
+--- !u!4 &1936271542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9209503497902981837, guid: 474cf4e92772cd642a8f9b6158056d4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936271541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947755055
 GameObject:
   m_ObjectHideFlags: 0

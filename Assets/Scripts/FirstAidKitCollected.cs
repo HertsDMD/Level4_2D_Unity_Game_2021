@@ -8,6 +8,7 @@ public class FirstAidKitCollected : MonoBehaviour
     public int healthAdded = 50;
     Animator anim;
     ParticleSystem CollectionParticles;
+    AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,9 @@ public class FirstAidKitCollected : MonoBehaviour
         healthManager = FindObjectOfType<HealthManager>();
         anim = GetComponent<Animator>();
         CollectionParticles = GetComponentInChildren<ParticleSystem>();
-    }
+        audioManager = FindObjectOfType<AudioManager>();
+
+  }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!healthManager.FullHealth)
@@ -24,9 +27,11 @@ public class FirstAidKitCollected : MonoBehaviour
              {
                  healthManager.AddHealth(healthAdded);
                  anim.SetBool("Collected", true);
-                    CollectionParticles.Play();
-                 Destroy(gameObject, 1f);          
-              }
+                CollectionParticles.Play();
+                 audioManager.PlaySound("HealthKitCollected", true);
+                 Destroy(gameObject, 1f);
+
+       }
         }
     }
 }

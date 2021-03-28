@@ -17,7 +17,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             healthManager.Damage(damageValue);
-            Destroy(gameObject, 0.5f);
+           // Destroy(gameObject, 0.5f);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
