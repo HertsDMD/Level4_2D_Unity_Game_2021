@@ -34,10 +34,11 @@ public class ScoreManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         currentScene = SceneManager.GetActiveScene().buildIndex;
-
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        
         if (scoreText != null)
-        {
-            scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        {         
+          
             scoreText.text = Score.ToString();
         }               
 
