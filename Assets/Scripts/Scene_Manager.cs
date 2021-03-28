@@ -29,9 +29,9 @@ public class Scene_Manager : MonoBehaviour
         Invoke(nameof(SceneLoadDelay), _delay);
     }
 
-    void SceneLoadDelay ()
-    { 
-        SceneManager.LoadScene(nextSceneNumber);        
+    void SceneLoadDelay()
+    {
+        SceneManager.LoadScene(nextSceneNumber);
     }
     public bool IsCurrentSceneFinal()
     {
@@ -43,7 +43,7 @@ public class Scene_Manager : MonoBehaviour
         {
             return false;
         }
-    
+
     }
 
 

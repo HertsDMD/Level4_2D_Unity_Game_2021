@@ -21,7 +21,10 @@ public class LevelComplete : MonoBehaviour
         scoreManager = FindObjectOfType<ScoreManager>();
 
         RestartButton = GameObject.Find("RestartButton");
+        if (RestartButton !=null)
+        {
         RestartButton.SetActive(false);
+        }
     }
 
    

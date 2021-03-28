@@ -1115,16 +1115,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - nameOfSound: AlienWalking
+  - nameOfSound: AlienWalk
     clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
-    volume: 0.5
-    volumeRandomness: 0
-    pitch: 1.48
-    pitchRandomness: 0.071
+    volume: 0.216
+    volumeRandomness: 0.086
+    pitch: 2
+    pitchRandomness: 0.135
     stereoPan: 0
-    loop: 1
+    loop: 0
     reverbPreset: 25
-  - nameOfSound: AlienJumping
+  - nameOfSound: AlienJum
     clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
     volume: 0.5
     volumeRandomness: 0
@@ -1134,13 +1134,13 @@ MonoBehaviour:
     loop: 0
     reverbPreset: 25
   - nameOfSound: ForestAmbience
-    clip: {fileID: 8300000, guid: e030d30a8986e4a4ba757337e238b242, type: 3}
-    volume: 0.556
+    clip: {fileID: 8300000, guid: 87e2220e7529f564d9cf2a1d5a719667, type: 3}
+    volume: 0.405
     volumeRandomness: 0
     pitch: 1
     pitchRandomness: 0
     stereoPan: 0
-    loop: 1
+    loop: 0
     reverbPreset: 25
   - nameOfSound: LevelMusic
     clip: {fileID: 8300000, guid: c97120819db9e084986cdcc0aa67eb5c, type: 3}
@@ -1810,12 +1810,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75d0e6c4f3a1d0438f6f3fec608350b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1200
-  jumpSpeed: 200
-  groundLayer:
+  walkSpeed: 40
+  m_JumpForce: 250
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  groundCheck: {fileID: 931878376}
+  m_GroundCheck: {fileID: 931878376}
+  NameOfWalkSound: AlienWalk
+  NameOfJumpSound: AlienJum
 --- !u!60 &358124684
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2711,8 +2715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44234dfe37c4860428c783f449a3e901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
-  VerticalOffset: 3
+  smoothTime: 0.1
+  VerticalOffset: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6062,7 +6066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a298caf2aea69b44bbecf48d5d507d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1040890938}
 --- !u!4 &1191413599
 Transform:
   m_ObjectHideFlags: 0

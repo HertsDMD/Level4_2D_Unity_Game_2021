@@ -1731,12 +1731,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75d0e6c4f3a1d0438f6f3fec608350b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 400
-  jumpSpeed: 200
-  groundLayer:
+  walkSpeed: 40
+  m_JumpForce: 250
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  groundCheck: {fileID: 931878376}
+  m_GroundCheck: {fileID: 931878376}
+  NameOfWalkSound: AlienWalk
+  NameOfJumpSound: AlienJump
 --- !u!60 &358124684
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3354,6 +3358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNumber: 0
+  currentScene: 0
 --- !u!114 &703108477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6049,6 +6054,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1144875960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1144875962}
+  - component: {fileID: 1144875961}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1144875961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144875960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a298caf2aea69b44bbecf48d5d507d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1040890938}
+--- !u!4 &1144875962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144875960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1403959, y: 3.8401692, z: -93.38869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1200441257
 GameObject:
   m_ObjectHideFlags: 0
@@ -7511,7 +7560,7 @@ GameObject:
   - component: {fileID: 1682604173}
   - component: {fileID: 1682604172}
   m_Layer: 5
-  m_Name: Restart Button
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7658,16 +7707,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - nameOfSound: AlienWalking
+  - nameOfSound: AlienWalk
     clip: {fileID: 8300000, guid: f0111a018d2c3eb478997d4c1e3463a6, type: 3}
-    volume: 0.5
-    volumeRandomness: 0
-    pitch: 1.48
-    pitchRandomness: 0.071
+    volume: 0.153
+    volumeRandomness: 0.104
+    pitch: 2
+    pitchRandomness: 0.167
     stereoPan: 0
-    loop: 1
+    loop: 0
     reverbPreset: 25
-  - nameOfSound: AlienJumping
+  - nameOfSound: AlienJump
     clip: {fileID: 8300000, guid: ab1ccb3ed9be9f843a9568229fd91ed5, type: 3}
     volume: 0.5
     volumeRandomness: 0
@@ -8753,50 +8802,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1945476922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1945476924}
-  - component: {fileID: 1945476923}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1945476923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945476922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a298caf2aea69b44bbecf48d5d507d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1040890938}
---- !u!4 &1945476924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945476922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1403959, y: 3.8401692, z: -93.38869}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1947755055
 GameObject:
   m_ObjectHideFlags: 0
